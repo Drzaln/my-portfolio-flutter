@@ -27,16 +27,16 @@ class PortfolioPage extends StatelessWidget {
                 shrinkWrap: true,
                 children: [
                   ScrollItem(
-                    image: 'lib/images/av.png',
+                    image: 'lib/images/av.webp',
                     title: 'AntaVaya',
                   ),
                   ScrollItem(
-                    image: 'lib/images/fb.png',
+                    image: 'lib/images/fb.webp',
                     title: 'Football',
                     isAlignStart: true,
                   ),
                   ScrollItem(
-                    image: 'lib/images/hf.png',
+                    image: 'lib/images/hf.webp',
                     title: 'HacktoberFest 2020',
                   )
                 ],

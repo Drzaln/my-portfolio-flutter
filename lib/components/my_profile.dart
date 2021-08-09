@@ -10,7 +10,7 @@ class MyProfile extends StatelessWidget {
       padding: EdgeInsets.all(20),
       child: Row(
         children: [
-          Image(image: AssetImage('lib/images/profile.png'), height: 75,),
+          Image(image: AssetImage('lib/images/profile.webp'), height: 75,),
           SizedBox(
             width: 20,
           ),
