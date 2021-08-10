@@ -30,7 +30,7 @@ class SquareItemScroll extends StatelessWidget {
                 children: [
                   SquareButton(
                     title: 'Skills',
-                    onPressed: () => print('1'),
+                    onPressed: () => {},
                   ),
                   SquareButton(
                       title: 'Experience', onPressed: () => print('2')),

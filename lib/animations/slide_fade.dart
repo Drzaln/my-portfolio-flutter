@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 enum Direction { vertical, horizontal }
 
-class SlideFadeVertical extends StatefulWidget {
+class SlideFade extends StatefulWidget {
   final Widget child;
   final double? offset;
   final Curve? curve;
@@ -12,7 +12,7 @@ class SlideFadeVertical extends StatefulWidget {
   final Duration? animationDuration;
   final Direction? direction;
 
-  SlideFadeVertical(
+  SlideFade(
       {Key? key,
       required this.child,
       this.offset = 0.2,
@@ -23,10 +23,10 @@ class SlideFadeVertical extends StatefulWidget {
       : super(key: key);
 
   @override
-  _SlideFadeVerticalState createState() => _SlideFadeVerticalState();
+  _SlideFadeState createState() => _SlideFadeState();
 }
 
-class _SlideFadeVerticalState extends State<SlideFadeVertical>
+class _SlideFadeState extends State<SlideFade>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animationFade;

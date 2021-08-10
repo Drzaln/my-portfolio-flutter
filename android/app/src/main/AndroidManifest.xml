@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:label="doddy_rn"
+        android:label="Doddy Rizal N"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

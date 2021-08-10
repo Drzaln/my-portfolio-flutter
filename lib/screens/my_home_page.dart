@@ -1,3 +1,4 @@
+import 'package:doddy_rn/animations/slide_fade.dart';
 import 'package:doddy_rn/components/custom_app_bar.dart';
 import 'package:doddy_rn/components/my_profile.dart';
 import 'package:doddy_rn/components/portfolio_button.dart';
@@ -15,21 +16,23 @@ class MyHomePage extends StatelessWidget {
           brightness: Brightness.light,
           backgroundColor: Theme.of(context).primaryColor,
           elevation: 0,
-          flexibleSpace: CustomAppBar()),
+          flexibleSpace: SlideFade(
+              offset: -0.2, child: Hero(tag: 'appbar', child: CustomAppBar()))),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               children: [
-                MyProfile(),
+                SlideFade(child: Hero(tag: 'profile', child: MyProfile())),
                 SizedBox(
                   height: 50,
                 ),
-                PortFolioButton(),
+                SlideFade(
+                    direction: Direction.horizontal, child: PortFolioButton()),
               ],
             ),
-            SquareItemScroll()
+            SlideFade(child: SquareItemScroll())
           ],
         ),
       ),

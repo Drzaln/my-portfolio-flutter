@@ -1,5 +1,5 @@
 import 'package:doddy_rn/animations/fade.dart';
-import 'package:doddy_rn/animations/slide_fade_vertical.dart';
+import 'package:doddy_rn/animations/slide_fade.dart';
 import 'package:doddy_rn/presentation/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 
