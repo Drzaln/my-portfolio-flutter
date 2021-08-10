@@ -38,30 +38,37 @@ class _CustomAppBarState extends State<CustomAppBar> {
               ],
             ),
           ),
-          DropdownButton<String>(
-            value: dropdownValue,
-            icon: Icon(
-              CustomIcons.keyboard_arrow_down,
-              color: Theme.of(context).accentColor,
-              size: 17,
+          GestureDetector(
+            onTap: (){},
+            child: Text(
+              'Hire Me',
+              style: TextStyle(color: Theme.of(context).accentColor),
             ),
-            iconSize: 17,
-            underline: Container(
-              height: 0,
-            ),
-            elevation: 1,
-            dropdownColor: Theme.of(context).primaryColor,
-            style: TextStyle(color: Theme.of(context).accentColor),
-            onChanged: (String? newValue) {
-              setState(() {
-                dropdownValue = newValue!;
-              });
-            },
-            items: <String>['English', 'Indonesia']
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(value: value, child: Text(value));
-            }).toList(),
-          ),
+          )
+          // DropdownButton<String>(
+          //   value: dropdownValue,
+          //   icon: Icon(
+          //     CustomIcons.keyboard_arrow_down,
+          //     color: Theme.of(context).accentColor,
+          //     size: 17,
+          //   ),
+          //   iconSize: 17,
+          //   underline: Container(
+          //     height: 0,
+          //   ),
+          //   elevation: 1,
+          //   dropdownColor: Theme.of(context).primaryColor,
+          //   style: TextStyle(color: Theme.of(context).accentColor),
+          //   onChanged: (String? newValue) {
+          //     setState(() {
+          //       dropdownValue = newValue!;
+          //     });
+          //   },
+          //   items: <String>['English', 'Indonesia']
+          //       .map<DropdownMenuItem<String>>((String value) {
+          //     return DropdownMenuItem<String>(value: value, child: Text(value));
+          //   }).toList(),
+          // ),
         ],
       ),
     );

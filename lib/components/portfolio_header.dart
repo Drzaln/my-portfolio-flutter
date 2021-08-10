@@ -1,3 +1,5 @@
+import 'package:doddy_rn/animations/fade.dart';
+import 'package:doddy_rn/animations/slide_fade_vertical.dart';
 import 'package:doddy_rn/presentation/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +18,11 @@ class PortfolioHeader extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              CustomIcons.arrow_back,
-              color: Theme.of(context).primaryColor,
+            Fade(
+              child: Icon(
+                CustomIcons.arrow_back,
+                color: Theme.of(context).primaryColor,
+              ),
             ),
             SizedBox(
               height: 8,
@@ -28,7 +32,7 @@ class PortfolioHeader extends StatelessWidget {
               child: Material(
                 type: MaterialType.transparency,
                 child: Text(
-                  'Portfolio',
+                  'Work',
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontSize: 40,

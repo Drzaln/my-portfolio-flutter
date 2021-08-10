@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:doddy_rn/animations/slide_fade_vertical.dart';
 import 'package:doddy_rn/components/portfolio_header.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +24,8 @@ class PortfolioPage extends StatelessWidget {
           children: [
             PortfolioHeader(),
             Expanded(
+                child: SlideFadeVertical(
+              offset: 1,
               child: ListView(
                 physics: BouncingScrollPhysics(),
                 padding: EdgeInsets.only(left: 10, right: 10, bottom: 20),
@@ -41,7 +46,7 @@ class PortfolioPage extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ))
           ],
         ))
       ],

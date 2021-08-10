@@ -32,7 +32,7 @@ class PortFolioButton extends StatelessWidget {
                   child: Material(
                     type: MaterialType.transparency,
                     child: Text(
-                      'Portfolio',
+                      'Work',
                       style: TextStyle(
                           color: Theme.of(context).primaryColor,
                           fontSize: 40,
