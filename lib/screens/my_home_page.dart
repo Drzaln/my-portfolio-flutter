@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
                     direction: Direction.horizontal, child: PortFolioButton()),
               ],
             ),
-            SlideFade(child: SquareItemScroll())
+            SquareItemScroll()
           ],
         ),
       ),

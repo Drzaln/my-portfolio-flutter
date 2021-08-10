@@ -23,7 +23,8 @@ class _FadeState extends State<Fade> with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
 
-  initState() {
+  @override
+  void initState() {
     super.initState();
     controller = AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
@@ -32,6 +33,12 @@ class _FadeState extends State<Fade> with SingleTickerProviderStateMixin {
     Timer(widget.delayStart ?? const Duration(seconds: 0), () {
       controller.forward();
     });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   Widget build(BuildContext context) {

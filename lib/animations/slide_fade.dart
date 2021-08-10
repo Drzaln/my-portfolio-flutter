@@ -59,6 +59,12 @@ class _SlideFadeState extends State<SlideFade>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FadeTransition(
       opacity: _animationFade,

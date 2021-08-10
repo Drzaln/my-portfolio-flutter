@@ -32,6 +32,6 @@ class CustomIcons {
   static const IconData mail_outline = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData arrow_back = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData keyboard_arrow_down = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData cancel = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData close = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData location = IconData(0xf031, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
