@@ -2,6 +2,7 @@ import 'package:doddy_rn/animations/slide_fade.dart';
 import 'package:doddy_rn/components/center_timeline_item.dart';
 import 'package:doddy_rn/components/square_button.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'custom_modal.dart';
 
@@ -45,43 +46,192 @@ class SquareItemScroll extends StatelessWidget {
                             isScrollControlled: true,
                             context: context,
                             builder: (BuildContext context) => CustomModal(
-                                  children: [
-                                    CenterTimeLineItem(
-                                      text: 'React Native',
-                                      placement: Placement.start,
-                                      position: Position.left,
-                                    ),
-                                    CenterTimeLineItem(
-                                      text: 'React Context',
-                                      position: Position.right,
-                                    ),
-                                    CenterTimeLineItem(
-                                      text: 'Javascript',
-                                      position: Position.left,
-                                    ),
-                                    CenterTimeLineItem(
-                                      text: 'Redux',
-                                      position: Position.right,
-                                    ),
-                                    CenterTimeLineItem(
-                                      text: 'Flutter',
-                                      position: Position.left,
-                                    ),
-                                    CenterTimeLineItem(
-                                      text: 'Git',
-                                      position: Position.right,
-                                      placement: Placement.end,
-                                    ),
-                                  ],
+                                  title: 'Skills',
+                                  child: (_, controller) => ListView(
+                                    shrinkWrap: true,
+                                    controller: controller,
+                                    children: [
+                                      CenterTimeLineItem(
+                                        text: 'React Native',
+                                        placement: Placement.start,
+                                        position: Position.left,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'React Context',
+                                        position: Position.right,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Javascript',
+                                        position: Position.left,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Redux',
+                                        position: Position.right,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Flutter',
+                                        position: Position.left,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Git',
+                                        position: Position.right,
+                                        placement: Placement.end,
+                                      ),
+                                    ],
+                                  ),
                                 ));
                       },
                     ),
                     SquareButton(
-                        title: 'Experience', onPressed: () => print('2')),
+                      title: 'Experience',
+                      onPressed: () {
+                        showModalBottomSheet(
+                            barrierColor: Colors.transparent,
+                            backgroundColor: Colors.transparent,
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (BuildContext context) => CustomModal(
+                                title: 'Experience',
+                                child: (_, controller) => DefaultTabController(
+                                    length: 2,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.stretch,
+                                      children: [
+                                        Container(
+                                          child: TabBar(
+                                            labelColor: Theme.of(context).primaryColor,
+                                            unselectedLabelColor: Color(0xFF6F6F6F),
+                                            labelStyle: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 19)),
+                                            indicatorColor: Theme.of(context).primaryColor,
+                                            indicatorPadding: EdgeInsets.symmetric(horizontal: 65),
+                                            tabs: [
+                                              Tab(
+                                                text: 'Work',
+                                              ),
+                                              Tab(text: 'Talk')
+                                            ],
+                                          ),
+                                        ),
+                                        Expanded(
+                                            child: TabBarView(
+                                          children: [
+                                              ListView(
+                                              shrinkWrap: true,
+                                              controller: controller,
+                                              children: [
+                                                CenterTimeLineItem(
+                                                  text: 'React Native',
+                                                  placement: Placement.start,
+                                                  position: Position.left,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'React Context',
+                                                  position: Position.right,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Javascript',
+                                                  position: Position.left,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Redux',
+                                                  position: Position.right,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Flutter',
+                                                  position: Position.left,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Git',
+                                                  position: Position.right,
+                                                  placement: Placement.end,
+                                                ),
+                                              ],
+                                            ),
+                                            ListView(
+                                              shrinkWrap: true,
+                                              controller: controller,
+                                              children: [
+                                                CenterTimeLineItem(
+                                                  text: 'React Native',
+                                                  placement: Placement.start,
+                                                  position: Position.left,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'React Context',
+                                                  position: Position.right,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Javascript',
+                                                  position: Position.left,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Redux',
+                                                  position: Position.right,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Flutter',
+                                                  position: Position.left,
+                                                ),
+                                                CenterTimeLineItem(
+                                                  text: 'Git',
+                                                  position: Position.right,
+                                                  placement: Placement.end,
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ))
+                                      ],
+                                    ))));
+                      },
+                    ),
                     SquareButton(
-                        title: 'Education',
-                        last: true,
-                        onPressed: () => print('3')),
+                      title: 'Education',
+                      last: true,
+                      onPressed: () {
+                        showModalBottomSheet(
+                            barrierColor: Colors.transparent,
+                            backgroundColor: Colors.transparent,
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (BuildContext context) => CustomModal(
+                                  title: 'Education',
+                                  child: (_, controller) => ListView(
+                                    shrinkWrap: true,
+                                    controller: controller,
+                                    children: [
+                                      CenterTimeLineItem(
+                                        text: 'React Native',
+                                        placement: Placement.start,
+                                        position: Position.left,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'React Context',
+                                        position: Position.right,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Javascript',
+                                        position: Position.left,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Redux',
+                                        position: Position.right,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Flutter',
+                                        position: Position.left,
+                                      ),
+                                      CenterTimeLineItem(
+                                        text: 'Git',
+                                        position: Position.right,
+                                        placement: Placement.end,
+                                      ),
+                                    ],
+                                  ),
+                                ));
+                      },
+                    )
                   ],
                 )),
           )
@@ -96,4 +246,3 @@ class SquareItemScroll extends StatelessWidget {
   //   child: GestureDetector(onTap: (){}, child: child,),
   // );
 }
-

@@ -2,8 +2,9 @@ import 'package:doddy_rn/presentation/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 
 class CustomModal extends StatelessWidget {
-  final List<Widget> children;
-  const CustomModal({Key? key, required this.children}) : super(key: key);
+  final ScrollableWidgetBuilder child;
+  final String title;
+  const CustomModal({Key? key, required this.child, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class CustomModal extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Skills',
+                  title,
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontSize: 32,
@@ -28,13 +29,8 @@ class CustomModal extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 30),
-                    child: ListView(
-                      shrinkWrap: true,
-                      controller: controller,
-                      children: children,
-                    ),
-                  ),
+                      margin: EdgeInsets.symmetric(vertical: 30),
+                      child: child(context, controller)),
                 ),
                 GestureDetector(
                     onTap: () => Navigator.pop(context),
