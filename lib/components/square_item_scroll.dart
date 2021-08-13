@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'custom_modal.dart';
+import 'left_timeline_item.dart';
 
 class SquareItemScroll extends StatelessWidget {
   const SquareItemScroll({Key? key}) : super(key: key);
@@ -51,31 +52,43 @@ class SquareItemScroll extends StatelessWidget {
                                     shrinkWrap: true,
                                     controller: controller,
                                     children: [
-                                      CenterTimeLineItem(
-                                        text: 'React Native',
-                                        placement: Placement.start,
-                                        position: Position.left,
+                                      SlideFade(
+                                        child: CenterTimeLineItem(
+                                          text: 'React Native',
+                                          placement: Placement.start,
+                                          position: Position.left,
+                                        ),
                                       ),
-                                      CenterTimeLineItem(
-                                        text: 'React Context',
-                                        position: Position.right,
+                                      SlideFade(
+                                        child: CenterTimeLineItem(
+                                          text: 'React Context',
+                                          position: Position.right,
+                                        ),
                                       ),
-                                      CenterTimeLineItem(
-                                        text: 'Javascript',
-                                        position: Position.left,
+                                      SlideFade(
+                                        child: CenterTimeLineItem(
+                                          text: 'Javascript',
+                                          position: Position.left,
+                                        ),
                                       ),
-                                      CenterTimeLineItem(
-                                        text: 'Redux',
-                                        position: Position.right,
+                                      SlideFade(
+                                        child: CenterTimeLineItem(
+                                          text: 'Redux',
+                                          position: Position.right,
+                                        ),
                                       ),
-                                      CenterTimeLineItem(
-                                        text: 'Flutter',
-                                        position: Position.left,
+                                      SlideFade(
+                                        child: CenterTimeLineItem(
+                                          text: 'Flutter',
+                                          position: Position.left,
+                                        ),
                                       ),
-                                      CenterTimeLineItem(
-                                        text: 'Git',
-                                        position: Position.right,
-                                        placement: Placement.end,
+                                      SlideFade(
+                                        child: CenterTimeLineItem(
+                                          text: 'Git',
+                                          position: Position.right,
+                                          placement: Placement.end,
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -100,11 +113,18 @@ class SquareItemScroll extends StatelessWidget {
                                       children: [
                                         Container(
                                           child: TabBar(
-                                            labelColor: Theme.of(context).primaryColor,
-                                            unselectedLabelColor: Color(0xFF6F6F6F),
-                                            labelStyle: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 19)),
-                                            indicatorColor: Theme.of(context).primaryColor,
-                                            indicatorPadding: EdgeInsets.symmetric(horizontal: 65),
+                                            labelColor:
+                                                Theme.of(context).primaryColor,
+                                            unselectedLabelColor:
+                                                Color(0xFF6F6F6F),
+                                            labelStyle: GoogleFonts.poppins(
+                                                textStyle:
+                                                    TextStyle(fontSize: 19)),
+                                            indicatorColor:
+                                                Theme.of(context).primaryColor,
+                                            indicatorPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 65),
                                             tabs: [
                                               Tab(
                                                 text: 'Work',
@@ -116,68 +136,41 @@ class SquareItemScroll extends StatelessWidget {
                                         Expanded(
                                             child: TabBarView(
                                           children: [
-                                              ListView(
+                                            ListView(
                                               shrinkWrap: true,
                                               controller: controller,
                                               children: [
-                                                CenterTimeLineItem(
-                                                  text: 'React Native',
-                                                  placement: Placement.start,
-                                                  position: Position.left,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'React Context',
-                                                  position: Position.right,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Javascript',
-                                                  position: Position.left,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Redux',
-                                                  position: Position.right,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Flutter',
-                                                  position: Position.left,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Git',
-                                                  position: Position.right,
-                                                  placement: Placement.end,
-                                                ),
+                                                SlideFade(
+                                                    child: LeftTimelineItem(
+                                                  title: 'Geek-La',
+                                                  date: 'May 2021 - Current',
+                                                  desc:
+                                                      'React Native Developer',
+                                                  placement: Place.start,
+                                                )),
+                                                SlideFade(
+                                                    child: LeftTimelineItem(
+                                                        title:
+                                                            'AntaVaya Tour & Travel',
+                                                        date:
+                                                            'Oct 2019 - May 2021',
+                                                        desc:
+                                                            'Frontend Developer',
+                                                        placement: Place.end))
                                               ],
                                             ),
                                             ListView(
                                               shrinkWrap: true,
                                               controller: controller,
                                               children: [
-                                                CenterTimeLineItem(
-                                                  text: 'React Native',
-                                                  placement: Placement.start,
-                                                  position: Position.left,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'React Context',
-                                                  position: Position.right,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Javascript',
-                                                  position: Position.left,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Redux',
-                                                  position: Position.right,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Flutter',
-                                                  position: Position.left,
-                                                ),
-                                                CenterTimeLineItem(
-                                                  text: 'Git',
-                                                  position: Position.right,
-                                                  placement: Placement.end,
-                                                ),
+                                                SlideFade(
+                                                    child: LeftTimelineItem(
+                                                  title:
+                                                      'Learn the Basic: React Native',
+                                                  date: '27 Feb 2021',
+                                                  desc: 'GDSC UNNES',
+                                                  placement: Place.end,
+                                                )),
                                               ],
                                             ),
                                           ],
@@ -201,32 +194,12 @@ class SquareItemScroll extends StatelessWidget {
                                     shrinkWrap: true,
                                     controller: controller,
                                     children: [
-                                      CenterTimeLineItem(
-                                        text: 'React Native',
-                                        placement: Placement.start,
-                                        position: Position.left,
-                                      ),
-                                      CenterTimeLineItem(
-                                        text: 'React Context',
-                                        position: Position.right,
-                                      ),
-                                      CenterTimeLineItem(
-                                        text: 'Javascript',
-                                        position: Position.left,
-                                      ),
-                                      CenterTimeLineItem(
-                                        text: 'Redux',
-                                        position: Position.right,
-                                      ),
-                                      CenterTimeLineItem(
-                                        text: 'Flutter',
-                                        position: Position.left,
-                                      ),
-                                      CenterTimeLineItem(
-                                        text: 'Git',
-                                        position: Position.right,
-                                        placement: Placement.end,
-                                      ),
+                                      SlideFade(
+                                          child: LeftTimelineItem(
+                                        title: 'Arkademy Tech Edu',
+                                        desc: 'Fullstack Developer',
+                                        placement: Place.end,
+                                      )),
                                     ],
                                   ),
                                 ));

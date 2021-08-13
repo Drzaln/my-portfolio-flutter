@@ -17,6 +17,7 @@ class MyHomePage extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColor,
           elevation: 0,
           flexibleSpace: SlideFade(
+            delayStart: Duration(milliseconds: 1000),
               offset: -0.2, child: Hero(tag: 'appbar', child: CustomAppBar()))),
       body: SafeArea(
         child: Column(
@@ -24,11 +25,12 @@ class MyHomePage extends StatelessWidget {
           children: [
             Column(
               children: [
-                SlideFade(child: Hero(tag: 'profile', child: MyProfile())),
+                SlideFade(delayStart: Duration(milliseconds: 1500),child: Hero(tag: 'profile', child: MyProfile())),
                 SizedBox(
                   height: 50,
                 ),
                 SlideFade(
+                    delayStart: Duration(milliseconds: 1800),
                     direction: Direction.horizontal, child: PortFolioButton()),
               ],
             ),
