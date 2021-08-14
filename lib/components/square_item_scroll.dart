@@ -20,6 +20,7 @@ class SquareItemScroll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               SlideFade(
+                delayStart: Duration(milliseconds: 400),
                 direction: Direction.horizontal,
                 child: Container(
                   height: 2,
@@ -32,6 +33,7 @@ class SquareItemScroll extends StatelessWidget {
             ],
           ),
           SlideFade(
+            delayStart: Duration(milliseconds: 700),
             child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 physics: BouncingScrollPhysics(),

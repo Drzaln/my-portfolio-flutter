@@ -25,12 +25,12 @@ class MyHomePage extends StatelessWidget {
           children: [
             Column(
               children: [
-                SlideFade(delayStart: Duration(milliseconds: 1500),child: Hero(tag: 'profile', child: MyProfile())),
+                SlideFade(delayStart: Duration(milliseconds: 1300),child: Hero(tag: 'profile', child: MyProfile())),
                 SizedBox(
                   height: 50,
                 ),
                 SlideFade(
-                    delayStart: Duration(milliseconds: 1800),
+                    delayStart: Duration(milliseconds: 1600),
                     direction: Direction.horizontal, child: PortFolioButton()),
               ],
             ),
