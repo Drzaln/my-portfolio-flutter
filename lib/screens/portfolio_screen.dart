@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:doddy_rn/animations/slide_fade.dart';
-import 'package:doddy_rn/components/portfolio_header.dart';
+import 'package:doddy_rn/widgets/portfolio_header.dart';
 import 'package:flutter/material.dart';
 
-class PortfolioPage extends StatelessWidget {
-  const PortfolioPage({Key? key}) : super(key: key);
+class PortfolioScreen extends StatelessWidget {
+  const PortfolioScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +30,16 @@ class PortfolioPage extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 ScrollItem(
-                  image: 'lib/images/av.webp',
+                  image: 'assets/images/av.webp',
                   title: 'AntaVaya',
                 ),
                 ScrollItem(
-                  image: 'lib/images/fb.webp',
+                  image: 'assets/images/fb.webp',
                   title: 'Football',
                   isAlignStart: true,
                 ),
                 ScrollItem(
-                  image: 'lib/images/hf.webp',
+                  image: 'assets/images/hf.webp',
                   title: 'HacktoberFest 2020',
                 )
               ],

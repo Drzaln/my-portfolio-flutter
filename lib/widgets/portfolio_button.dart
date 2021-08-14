@@ -1,5 +1,5 @@
-import 'package:doddy_rn/components/custom_page_route.dart';
-import 'package:doddy_rn/screens/portfolio_page.dart';
+import 'package:doddy_rn/widgets/custom_page_route.dart';
+import 'package:doddy_rn/screens/portfolio_screen.dart';
 import 'package:flutter/material.dart';
 
 class PortFolioButton extends StatelessWidget {
@@ -9,7 +9,7 @@ class PortFolioButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, CustomPageRoute(PortfolioPage()));
+        Navigator.push(context, CustomPageRoute(PortfolioScreen()));
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,

@@ -1,6 +1,6 @@
 import 'package:doddy_rn/animations/slide_fade.dart';
-import 'package:doddy_rn/components/center_timeline_item.dart';
-import 'package:doddy_rn/components/square_button.dart';
+import 'package:doddy_rn/widgets/center_timeline_item.dart';
+import 'package:doddy_rn/widgets/square_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

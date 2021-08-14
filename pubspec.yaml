@@ -48,11 +48,11 @@ flutter:
   fonts:
     - family: CustomIcons
       fonts:
-        - asset: lib/fonts/CustomIcons.ttf
+        - asset: assets/fonts/CustomIcons.ttf
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/images/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
